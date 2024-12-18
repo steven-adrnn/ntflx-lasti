@@ -16,11 +16,24 @@ export function VotingSection() {
     { id: 2, title: "Inception 2", votes: 0 },
     { id: 3, title: "Interstellar 2", votes: 0 },
   ])
+  const [userVote, setUserVote] = useState<number | null>(null)
 
   const handleVote = (id: number) => {
-    setMovies(movies.map(movie => 
-      movie.id === id ? { ...movie, votes: movie.votes + 1 } : movie
-    ))
+    if (userVote === id) {
+      // User is un-voting
+      setMovies(movies.map(movie => 
+        movie.id === id ? { ...movie, votes: movie.votes - 1 } : movie
+      ))
+      setUserVote(null)
+    } else {
+      // User is voting for a new movie
+      setMovies(movies.map(movie => 
+        movie.id === id ? { ...movie, votes: movie.votes + 1 } 
+        : userVote === movie.id ? { ...movie, votes: movie.votes - 1 }
+        : movie
+      ))
+      setUserVote(id)
+    }
   }
 
   return (
@@ -37,7 +50,12 @@ export function VotingSection() {
               <p>Current Votes: {movie.votes}</p>
             </CardContent>
             <CardFooter>
-              <Button onClick={() => handleVote(movie.id)}>Vote</Button>
+              <Button 
+                onClick={() => handleVote(movie.id)}
+                variant={userVote === movie.id ? "destructive" : "default"}
+              >
+                {userVote === movie.id ? "Unvote" : "Vote"}
+              </Button>
             </CardFooter>
           </Card>
         ))}
@@ -45,3 +63,4 @@ export function VotingSection() {
     </div>
   )
 }
+

@@ -11,10 +11,21 @@ interface WatchPartyProps {
   onClose: () => void
 }
 
+const randomReplies = [
+  "Keren banget!",
+  "Uwowww",
+  "yang rambut merah itu siapa?",
+  "Filmny bagus banget!",
+  "Animasinya bagus banget!",
+  "lagunya bagus banget!",
+  "Filmnya gak menarik"
+]
+
 export function WatchParty({ videoUrl, isHost, invitationCode, onClose }: WatchPartyProps) {
-  const [messages, setMessages] = useState<string[]>([])
+  const [messages, setMessages] = useState<{ text: string, isUser: boolean }[]>([])
   const [newMessage, setNewMessage] = useState('')
   const [localInvitationCode, setLocalInvitationCode] = useState(invitationCode || '')
+  const [participants, setParticipants] = useState(isHost ? 1 : 2)
 
   useEffect(() => {
     if (isHost && !localInvitationCode) {
@@ -24,9 +35,12 @@ export function WatchParty({ videoUrl, isHost, invitationCode, onClose }: WatchP
 
   const handleSendMessage = () => {
     if (newMessage.trim()) {
-      setMessages([...messages, newMessage])
+      setMessages([...messages, { text: newMessage, isUser: true }])
       setNewMessage('')
-      // Here you would typically send the message to other participants
+      setTimeout(() => {
+        const randomReply = randomReplies[Math.floor(Math.random() * randomReplies.length)]
+        setMessages(prevMessages => [...prevMessages, { text: randomReply, isUser: false }])
+      }, 1000 + Math.random() * 2000) 
     }
   }
 
@@ -39,14 +53,17 @@ export function WatchParty({ videoUrl, isHost, invitationCode, onClose }: WatchP
       </div>
       <div className="w-1/4 h-full bg-gray-900 p-4 flex flex-col">
         <Button variant="secondary" onClick={onClose} className="mb-4">Close Watch Party</Button>
-        {isHost && (
-          <div className="mb-4">
+        <div className="mb-4">
+          <p className="text-white">Participants: {participants}</p>
+          {isHost && (
             <p className="text-white">Invitation Code: {localInvitationCode}</p>
-          </div>
-        )}
+          )}
+        </div>
         <div className="flex-grow overflow-y-auto mb-4">
           {messages.map((message, index) => (
-            <p key={index} className="text-white mb-2">{message}</p>
+            <p key={index} className={`mb-2 ${message.isUser ? 'text-blue-400' : 'text-green-400'}`}>
+              {message.isUser ? 'You' : 'Friend'}: {message.text}
+            </p>
           ))}
         </div>
         <div className="flex">
@@ -63,3 +80,4 @@ export function WatchParty({ videoUrl, isHost, invitationCode, onClose }: WatchP
     </div>
   )
 }
+
