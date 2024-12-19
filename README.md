@@ -1,18 +1,75 @@
-# To run this locally
+# NTFLX-LASTI
 
-First, make sure you have Node.js installed on your computer. You can download it from [https://nodejs.org/](https://nodejs.org/)
-(if needed, Install additional dependencies: npm install @radix-ui/react-dialog lucide-react)
+## Deskripsi Proyek
 
-Then, run the development server:
+NTFLX-LASTI adalah aplikasi berbasis web yang dirancang untuk membuat prototipe dari pengembangan layanan Netflix yang diajukan sebagai bagian dari tugas mata kuliah II3120 - Layanan Sistem dan Teknologi informasi. Proyek ini dikembangkan menggunakan teknologi modern seperti Next.js dan Tailwind CSS, memberikan pengalaman pengguna yang cepat dan responsif.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Anda dapat mengakses versi deployed dari prototipe ini dengan mengunjungi https://ntflx-lastii.vercel.app/
+
+## Fitur Utama
+
+- **[Fitur 1]**: [Deskripsi fitur 1]
+
+- **[Fitur 2]**: [Deskripsi fitur 2]
+
+- **[Fitur 3]**: [Deskripsi fitur 3]
+
+## Teknologi yang Digunakan
+
+- **Framework**: Next.js
+
+- **Styling**: Tailwind CSS
+
+- **Komponen UI**: Radix UI dan Lucide React
+
+- **Bahasa**: TypeScript
+
+## Struktur Proyek
+
+Berikut adalah struktur folder utama dalam repositori:
+
+```
+ntflx-lasti/
+├── app/                  # Halaman dan rute aplikasi utama
+├── components/           # Komponen UI yang dapat digunakan kembali
+├── lib/                  # Pustaka dan fungsi tambahan
+├── public/               # File statis (gambar, ikon, dll.)
+├── styles/               # Konfigurasi dan gaya khusus
+├── package.json          # Informasi dependensi dan skrip npm
+├── next.config.mjs       # Konfigurasi untuk Next.js
+├── tailwind.config.ts    # Konfigurasi untuk Tailwind CSS
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Persyaratan Aplikasi
+
+Node.js: Pastikan Node.js telah terinstal di sistem Anda. [Unduh Node.js di sini](https://nodejs.org/en)
+
+Paket Tambahan: Radix UI dan Lucide React (akan diinstal melalui `npm install`).
+
+## Cara Menjalankan Proyek Secara Lokal
+
+1. Clone repositori ini:
+```
+git clone https://github.com/steven-adrnn/ntflx-lasti.git
+cd ntflx-lasti
+```
+2. Instal dependensi:
+
+`npm install`
+
+3. Jalankan server pengembangan:
+
+`npm run dev`
+atau
+`yarn dev`
+atau
+`pnpm dev`
+
+4. Buka http://localhost:3000 di browser Anda untuk melihat aplikasi.
+
+## Kontributor proyek:
+- [Steven Adrian C.](https://github.com/steven-adrnn)
+- [Dama D. Daliman](https://github.com/RunningPie)
+- [Alvin F. Akmal](https://github.com/Salt-E)
+- [Daffari Adiyatma](https://github.com/jackund25)
+- [Kezia Caren C.](https://github.com/keziachyd)
