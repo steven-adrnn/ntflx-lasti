@@ -68,8 +68,8 @@ atau
 4. Buka http://localhost:3000 di browser Anda untuk melihat aplikasi.
 
 ## Kontributor proyek:
-- [Steven Adrian C.](https://github.com/steven-adrnn)
-- [Dama D. Daliman](https://github.com/RunningPie)
-- [Alvin F. Akmal](https://github.com/Salt-E)
-- [Daffari Adiyatma](https://github.com/jackund25)
-- [Kezia Caren C.](https://github.com/keziachyd)
+- [Steven Adrian Corne - 18222101](https://github.com/steven-adrnn)
+- [Dama Dhananjaya Daliman - 18222047](https://github.com/RunningPie)
+- [Alvin Fadhilah Akmal - 18222079](https://github.com/Salt-E)
+- [Daffari Adiyatma - 18222003](https://github.com/jackund25)
+- [Kezia Caren Cahyadi - 18222041](https://github.com/keziachyd)
