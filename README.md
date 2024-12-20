@@ -12,7 +12,6 @@ Anda dapat mengakses versi deployed dari prototipe ini dengan mengunjungi https:
 
 - **Watch Party**: Watch Party adalah fitur yang memungkinkan pengguna menonton konten Netflix bersama-sama secara virtual meskipun berada di lokasi berbeda. Fitur ini menyediakan ruang streaming yang tersinkronisasi dimana semua peserta melihat konten pada waktu yang sama, dilengkapi dengan fitur chat real-time untuk berinteraksi selama menonton. Ketika host melakukan pause atau play, video akan otomatis tersinkronisasi untuk semua peserta.
 
-- **[Fitur 3]**: [Deskripsi fitur 3]
 
 ## Teknologi yang Digunakan
 
