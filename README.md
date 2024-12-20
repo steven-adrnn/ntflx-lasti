@@ -8,9 +8,9 @@ Anda dapat mengakses versi deployed dari prototipe ini dengan mengunjungi https:
 
 ## Fitur Utama
 
-- **[Fitur 1]**: [Deskripsi fitur 1]
+- **Sistem Voting Film**: Sistem Voting Film (Request a Movie) memungkinkan pengguna berpartisipasi aktif dalam pemilihan konten Netflix melalui sistem voting online. Misalnya, Netflix akan menampilkan beberapa pilihan film atau serial yang sedang dipertimbangkan untuk diproduksi atau dibeli lisensinya, kemudian pengguna bisa memberikan suara dan feedback. Sistem ini membantu Netflix membuat keputusan konten berdasarkan preferensi nyata dari pengguna.
 
-- **[Fitur 2]**: [Deskripsi fitur 2]
+- **Watch Party**: Watch Party adalah fitur yang memungkinkan pengguna menonton konten Netflix bersama-sama secara virtual meskipun berada di lokasi berbeda. Fitur ini menyediakan ruang streaming yang tersinkronisasi dimana semua peserta melihat konten pada waktu yang sama, dilengkapi dengan fitur chat real-time untuk berinteraksi selama menonton. Ketika host melakukan pause atau play, video akan otomatis tersinkronisasi untuk semua peserta.
 
 - **[Fitur 3]**: [Deskripsi fitur 3]
 
